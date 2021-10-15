@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from "./NavStyles";
-
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import "./Nav.css";
 const Navbar = () => {
   return (
     <>
@@ -10,23 +11,32 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to="/about" activeStyle>
-            About
-          </NavLink>
-          <NavLink to="/services" activeStyle>
-            Services
-          </NavLink>
-          <NavLink to="/contact-us" activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            Sign Up
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+          <div className="formContainer">
+            <input
+              placeholder="Search"
+              // onChange={props.onType}
+              className="searchInput"
+              // value={props.searchText}
+              type="text"
+            />
+           
+          </div>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <NavBtnLink to="/signin">JOIN NOW</NavBtnLink>
+        </NavBtn>
+        <NavBtn>
+          <NavBtnLink to="/signin">SIGN IN </NavBtnLink>
+        </NavBtn>
+        <NavBtn>
+          <NavLink to="/checkout">
+            <div className="header__optionBasket">
+              <ShoppingBasketIcon />
+              <span className="header__optionLineTwo header__basketCount">
+                {/* {basket?.length} */}
+              </span>
+            </div>
+          </NavLink>
         </NavBtn>
       </Nav>
     </>
