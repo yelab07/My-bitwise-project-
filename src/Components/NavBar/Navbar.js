@@ -3,13 +3,22 @@ import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from "./NavStyles";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import "./Nav.css";
 const Navbar = () => {
+   const styles = {
+     navToggle: {
+       height: "10vh",
+       borderBottom: "0.5px grey solid",
+       display: "flex",
+       justifyContent: "flex-end",
+       alignItems: "center",
+     },
+   };
   return (
     <>
       <Nav>
         <NavLink to="/">
-          <h3>My Shop</h3>
+          <h3>ZAGOAL</h3>
         </NavLink>
-        <Bars />
+
         <NavMenu>
           <div className="formContainer">
             <input
@@ -19,25 +28,31 @@ const Navbar = () => {
               // value={props.searchText}
               type="text"
             />
-           
           </div>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/signin">JOIN NOW</NavBtnLink>
-        </NavBtn>
-        <NavBtn>
-          <NavBtnLink to="/signin">SIGN IN </NavBtnLink>
-        </NavBtn>
-        <NavBtn>
-          <NavLink to="/checkout">
-            <div className="header__optionBasket">
-              <ShoppingBasketIcon />
-              <span className="header__optionLineTwo header__basketCount">
-                {/* {basket?.length} */}
-              </span>
-            </div>
-          </NavLink>
-        </NavBtn>
+        <NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/signin">JOIN NOW</NavBtnLink>
+          </NavBtn>
+          <NavBtn>
+            <NavBtnLink to="/signin">SIGN IN </NavBtnLink>
+          </NavBtn>
+          <NavBtn>
+            <NavLink to="/checkout">
+              <div className="header__optionBasket">
+                <ShoppingBasketIcon />
+                <span className="header__optionLineTwo header__basketCount">
+                  {/* {basket?.length} */}
+                </span>
+              </div>
+            </NavLink>
+          </NavBtn>
+          <NavBtn>
+            <nav style={styles.navToggle}>
+              <Toggle />
+            </nav>
+          </NavBtn>
+        </NavMenu>
       </Nav>
     </>
   );
