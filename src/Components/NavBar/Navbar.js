@@ -1,17 +1,19 @@
 import React from "react";
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from "./NavStyles";
+import { Nav, NavLink,NavMenu, NavBtn, NavBtnLink } from "./NavStyles";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+
 import "./Nav.css";
+import Toggle from "../Toggle/Toggle";
 const Navbar = () => {
-   const styles = {
-     navToggle: {
-       height: "10vh",
-       borderBottom: "0.5px grey solid",
-       display: "flex",
-       justifyContent: "flex-end",
-       alignItems: "center",
-     },
-   };
+  //  const styles = {
+  //    navToggle: {
+  //     //  height: "10vh",
+  //     // //  borderBottom: "0.5px grey solid",
+  //     //  display: "flex",
+  //     //  justifyContent: "flex-end",
+  //     //  alignItems: "center",
+  //    },
+  //  };
   return (
     <>
       <Nav>
@@ -48,9 +50,9 @@ const Navbar = () => {
             </NavLink>
           </NavBtn>
           <NavBtn>
-            <nav style={styles.navToggle}>
+            {/* <nav style={styles.navToggle}> */}
               <Toggle />
-            </nav>
+            {/* </nav> */}
           </NavBtn>
         </NavMenu>
       </Nav>
