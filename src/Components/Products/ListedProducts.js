@@ -1,7 +1,9 @@
 import React from "react";
+import { useState, useEffect } from "react";
+  
 import "./Products.css";
 
-const ListedProducts () => {
+const ListedProducts = () => {
     const [data, setData] = useState([]);
     const [filter, setFilter] = useState(data);
     const [loading, setLoading] = useState(false);
