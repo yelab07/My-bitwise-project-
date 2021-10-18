@@ -24,4 +24,4 @@ const ListedProducts () => {
   );
 };
 
-export default movies;
+export default ListedProducts ;
